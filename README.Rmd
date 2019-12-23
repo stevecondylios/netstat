@@ -20,13 +20,13 @@ Load library
 library(netstat)
 ```
 
-See which TCP ports are *in use*
+### See which TCP ports are *in use*
 
 ```{r}
 ports_in_use()
 ```
 
-Find a free TCP port using `free_port()`.
+### Find a free TCP port using `free_port()`.
 
 
 ```{r}
