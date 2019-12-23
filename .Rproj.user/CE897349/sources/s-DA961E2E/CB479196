@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1577072603703.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CB479196",
+    "lastKnownWriteTime" : 1577072925,
+    "last_content_update" : 1577072925998,
+    "path" : "~/netstat/R/unassigned_ports.R",
+    "project_path" : "R/unassigned_ports.R",
+    "properties" : {
+        "cursorPosition" : "6,2",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

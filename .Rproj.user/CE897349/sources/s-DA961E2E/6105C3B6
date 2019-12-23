@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1577072930946.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6105C3B6",
+    "lastKnownWriteTime" : 1577073126,
+    "last_content_update" : 1577073126920,
+    "path" : "~/netstat/R/free_port.R",
+    "project_path" : "R/free_port.R",
+    "properties" : {
+        "cursorPosition" : "2,18",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
