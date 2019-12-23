@@ -1,0 +1,46 @@
+---
+title: "README"
+author: "Steve Condylios"
+date: "23/12/2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The Netstat Package
+
+The purpose of this package is the easily view which TCP ports are in use and which are free to use. 
+
+Install and load the `netstat` library with
+
+```{r results = 'hide', warning=FALSE, message=FALSE}
+# library(devtools)
+# install_github("stevecondylios/netstat")
+library(netstat)
+```
+
+See which TCP ports are in use
+
+```{r}
+# Display the TCP ports currently in use
+ports_in_use()
+```
+
+Find a free TCP port using `free_port()`.
+
+`free_port()` returns a TCP port from Internet Assigned Numbers Authority (IANA) listed 
+unassigned ports. Any TCP port being used by the local machine will not be returned (so 
+`free_port()` can be used for port allocation in applications)
+
+```{r}
+# Display the TCP ports currently in use
+free_port()
+free_port(random=T)
+```
+
+
+
+
+
