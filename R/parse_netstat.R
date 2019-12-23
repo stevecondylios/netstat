@@ -2,7 +2,7 @@
 #'
 #' @name parse_netstat
 #'
-#' @usage parse_netstat()
+#' @usage parse_netstat(netstat_output)
 #' @param netstat_output The output of netstat() - i.e. a character vector comprising the output
 #'    of the netstat command line utility
 #'
@@ -16,16 +16,7 @@
 #'   (active_connections_table <- parse_netstat(netstat_output))
 #' }
 #'
-
-
-
-
-
-
-
-
-
-
+#' @importFrom utils read.table
 
 
 parse_netstat <- function(netstat_output) {

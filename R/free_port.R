@@ -2,7 +2,8 @@
 #'
 #' @name free_port
 #'
-#' @usage free_port()
+#' @usage free_port(random)
+#' @param random Boolean value that defaults to FALSE
 #'
 #' @return A character vector of length one
 #'
