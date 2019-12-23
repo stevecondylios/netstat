@@ -30,7 +30,6 @@ ports_in_use()
 
 
 ```{r}
-# Display the TCP ports currently in use
 free_port()
 free_port(random=T)
 ```

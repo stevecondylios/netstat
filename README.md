@@ -20,7 +20,7 @@ library(netstat)
 ports_in_use()
 ```
 
-    ##  [1] "40521" "57893" "24836" "57887" "1538"  "57726" "57628" "1025" 
+    ##  [1] "40521" "57918" "57900" "24836" "57887" "1538"  "57628" "1025" 
     ##  [9] "1024"  "57473" "57460" "57342" "57341" "57291" "57340" "57292"
     ## [17] "27117" "52187" "52186" "50467" "9151"  "55630" "55628" "55626"
     ## [25] "9150"  "60380" "60379" "11170" "49154" "61086" "52156" "44617"
@@ -31,7 +31,6 @@ ports_in_use()
 ### Find a free TCP port using `free_port()`.
 
 ``` r
-# Display the TCP ports currently in use
 free_port()
 ```
 
@@ -41,7 +40,7 @@ free_port()
 free_port(random=T)
 ```
 
-    ## [1] 12654
+    ## [1] 2622
 
   - `free_port()` returns a TCP port from Internet Assigned Numbers
     Authority (IANA) listed unassigned ports.
