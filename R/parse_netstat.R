@@ -24,7 +24,18 @@ parse_netstat <- function(netstat_output) {
   os <- Sys.info()['sysname']
 
   switch(os,
-         Darwin = {
+         Windows = {
+           # print("retriving windows")
+           ActiveConnections <- netstat_output[-c(1:3)]
+
+
+           temp <- paste0(gsub("\\s+", ",", ActiveConnections), collapse="\n")
+           read.table(text = temp, sep=",", stringsAsFactors = F, header=T, fill = T) # Note header T for windows
+         },
+
+         # Default behaviour (confirmed working for Darwin)
+
+         {
            # Retrieve from the second row (since the first is a description)
            ActiveConnections <- netstat_output[3: (which(netstat_output == "Active Multipath Internet connections") - 1)]
 
@@ -33,15 +44,8 @@ parse_netstat <- function(netstat_output) {
            read.table(text = temp, sep=",", stringsAsFactors = F, header=F, fill = T)
 
          }
-         ,
-         Windows = {
-           # print("retriving windows")
-           ActiveConnections <- netstat_output[-c(1:3)]
 
-
-           temp <- paste0(gsub("\\s+", ",", ActiveConnections), collapse="\n")
-           read.table(text = temp, sep=",", stringsAsFactors = F, header=T, fill = T) # Note header T for windows
-         })
+         )
 
 }
 

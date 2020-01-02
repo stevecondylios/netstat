@@ -20,15 +20,20 @@ netstat <- function() {
   os <- Sys.info()['sysname']
 
   switch(os,
-         Darwin = {
-           # print("retriving darwin")
+
+         Windows = {
+           # print("retrieving windows")
+           system("netstat -n -a", intern = T)
+         },
+
+         # Default behaviour (confirmed working for Darwin)
+
+         {
+           # print("retrieving darwin")
            system("netstat -n -a", intern = T)
          }
-         ,
-         Windows = {
-           # print("retriving windows")
-           system("netstat -n -a", intern = T)
-         })
+
+         )
 }
 
 

@@ -20,11 +20,22 @@
 
 ports_in_use <- function() {
 
+  active_connections_table <- parse_netstat(netstat())
+
   os <- Sys.info()['sysname']
 
   switch(os,
-         Darwin = {
-           active_connections_table <- parse_netstat(netstat())
+
+         Windows = {
+           local <- active_connections_table$Local
+
+           sapply(strsplit(local, ":"), function(x) { tail(x, 1) } )
+
+         },
+
+
+         # Default behaviour (confirmed working for Darwin)
+         {
 
            local_address <- active_connections_table[,4]
 
@@ -44,13 +55,8 @@ ports_in_use <- function() {
            unique(unname(sapply(local_address, after_last_dot))) # Note: may contain * (star character)
 
          }
-         ,
-         Windows = {
-           local <- active_connections_table$Local
 
-           sapply(strsplit(local, ":"), function(x) { tail(x, 1) } )
-
-         })
+         )
 
 }
 
