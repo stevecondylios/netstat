@@ -7,7 +7,7 @@ Maintainer: Steve Condylios <steve.condylios@gmail.com>
 BugReports: https://github.com/stevecondylios/netstat/issues
 URL: https://github.com/stevecondylios/netstat
 Description: A collection of functions to aid in the retrieval, parsing, and use of commonly
-    used network statistics (such as those obtained through the netstat command-line network 
+    used network statistics (such as those obtained through the netstat command-line network
     utility).
 License: MIT + file LICENSE
 Encoding: UTF-8

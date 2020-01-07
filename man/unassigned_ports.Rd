@@ -9,7 +9,8 @@ unassigned_ports()
 }
 \value{
 A character vector comprising unassigned TCP ports provided by the
-    Internet Assigned Numbers Authority (IANA)
+    Internet Assigned Numbers Authority (IANA). Note that not all unassigned ports will
+    necessarily be returned.
 }
 \description{
 Obtain a list of the largest ranges of unassigned TCP ports as provided by the
