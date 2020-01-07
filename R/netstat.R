@@ -6,7 +6,6 @@
 #'
 #' @return A character vector comprising the output of the netstat command line utility
 #'
-#' @export
 #'
 #' @examples
 #' \dontrun{

@@ -8,7 +8,6 @@
 #'
 #' @return A data.frame containing the Active Internet Connections from netstat() output
 #'
-#' @export
 #'
 #' @examples
 #' \dontrun{

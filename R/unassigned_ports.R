@@ -6,7 +6,8 @@
 #' @usage unassigned_ports()
 #'
 #' @return A character vector comprising unassigned TCP ports provided by the
-#'     Internet Assigned Numbers Authority (IANA)
+#'     Internet Assigned Numbers Authority (IANA). Note that not all unassigned ports will
+#'     necessarily be returned.
 #'
 #' @export
 #'
@@ -18,7 +19,7 @@
 
 
 unassigned_ports <- function() {
-  # List of IANA unassigned TCP port ranges
+  # List of (some, not all) IANA unassigned TCP port ranges
   # https://stackoverflow.com/a/28369841/
   c(
     29170:29998,
