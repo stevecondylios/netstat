@@ -36,7 +36,7 @@ free_port(random=T)
 unassigned ports. 
 
 * Any TCP port being used by the local machine will not be returned (so 
-`free_port()` can be used for programatic port allocation in applications)
+`free_port()` can be used to allocate a free port programmatically in applications without collisions)
 
 
 

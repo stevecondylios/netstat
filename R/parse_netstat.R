@@ -24,7 +24,7 @@ parse_netstat <- function(netstat_output) {
 
   switch(os,
          Windows = {
-           # print("retriving windows")
+           # print("retrieving windows")
            ActiveConnections <- netstat_output[-c(1:3)]
 
 

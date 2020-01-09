@@ -47,8 +47,8 @@ ports_in_use <- function() {
 
            after_last_dot <- function(local_address) {
              address_split <- strsplit(local_address, "\\.")
-             address_componenents <- length(address_split[[1]])
-             last_component <- address_split[[1]][address_componenents]
+             address_components <- length(address_split[[1]])
+             last_component <- address_split[[1]][address_components]
              #trimws(last_component)
            }
 
