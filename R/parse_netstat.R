@@ -1,14 +1,14 @@
-#' Parse the output of the netstat command line utility - obtained via netstat()
+#' Parse the output of the 'Netstat' command line utility - obtained via netstat()
 #'
 #' @name parse_netstat
 #'
 #' @usage parse_netstat(netstat_output)
-#' @param netstat_output The output of netstat() - i.e. a character vector comprising the output
-#'    of the netstat command line utility
+#' @param netstat_output The output of netstat() - i.e. a character
+#'    vector comprising the output of the Netstat command line utility
 #'
 #' @return A data.frame containing the Active Internet Connections from netstat() output
 #'
-#'
+#' @export
 #' @examples
 #' \dontrun{
 #'   netstat_output <- netstat()

@@ -1,11 +1,12 @@
-#' Obtain a list of the largest ranges of unassigned TCP ports as provided by the
-#'     Internet Assigned Numbers Authority (IANA)
+#' Obtain a list of the largest ranges of unassigned Transmission Control Protocol (TCP)
+#'     ports as provided by the Internet Assigned Numbers Authority (IANA)
 #'
 #' @name unassigned_ports
 #'
 #' @usage unassigned_ports()
 #'
-#' @return A character vector comprising unassigned TCP ports provided by the
+#' @return A character vector comprising unassigned Transmission Control Protocol (TCP) ports
+#'     provided by the
 #'     Internet Assigned Numbers Authority (IANA). Note that not all unassigned ports will
 #'     necessarily be returned.
 #'

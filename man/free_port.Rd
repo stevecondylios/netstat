@@ -2,7 +2,7 @@
 % Please edit documentation in R/free_port.R
 \name{free_port}
 \alias{free_port}
-\title{Retrieve a TCP port that is not currently in use}
+\title{Retrieve a Transmission Control Protocol (TCP) port that is not currently in use}
 \usage{
 free_port(random)
 }
@@ -13,7 +13,7 @@ free_port(random)
 A character vector of length one
 }
 \description{
-Retrieve a TCP port that is not currently in use
+Retrieve a Transmission Control Protocol (TCP) port that is not currently in use
 }
 \examples{
 \dontrun{

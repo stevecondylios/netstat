@@ -1,12 +1,14 @@
-#' Retrieve the output of the netstat command line utility
+#' Retrieve the output of the 'netstat' command line utility
 #'
 #' @name netstat
 #'
 #' @usage netstat()
 #'
-#' @return A character vector comprising the output of the netstat command line utility
+#' @return A character vector comprising the output of the 'netstat' command line utility
 #'
+#' @export
 #'
+#' @keywords internal
 #' @examples
 #' \dontrun{
 #'   netstat()

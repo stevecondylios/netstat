@@ -2,15 +2,15 @@
 % Please edit documentation in R/netstat.R
 \name{netstat}
 \alias{netstat}
-\title{Retrieve the output of the netstat command line utility}
+\title{Retrieve the output of the 'netstat' command line utility}
 \usage{
 netstat()
 }
 \value{
-A character vector comprising the output of the netstat command line utility
+A character vector comprising the output of the 'netstat' command line utility
 }
 \description{
-Retrieve the output of the netstat command line utility
+Retrieve the output of the 'netstat' command line utility
 }
 \examples{
 \dontrun{
@@ -18,3 +18,4 @@ Retrieve the output of the netstat command line utility
 }
 
 }
+\keyword{internal}

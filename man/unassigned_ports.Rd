@@ -2,19 +2,20 @@
 % Please edit documentation in R/unassigned_ports.R
 \name{unassigned_ports}
 \alias{unassigned_ports}
-\title{Obtain a list of the largest ranges of unassigned TCP ports as provided by the
-    Internet Assigned Numbers Authority (IANA)}
+\title{Obtain a list of the largest ranges of unassigned Transmission Control Protocol (TCP)
+    ports as provided by the Internet Assigned Numbers Authority (IANA)}
 \usage{
 unassigned_ports()
 }
 \value{
-A character vector comprising unassigned TCP ports provided by the
+A character vector comprising unassigned Transmission Control Protocol (TCP) ports
+    provided by the
     Internet Assigned Numbers Authority (IANA). Note that not all unassigned ports will
     necessarily be returned.
 }
 \description{
-Obtain a list of the largest ranges of unassigned TCP ports as provided by the
-    Internet Assigned Numbers Authority (IANA)
+Obtain a list of the largest ranges of unassigned Transmission Control Protocol (TCP)
+    ports as provided by the Internet Assigned Numbers Authority (IANA)
 }
 \examples{
 \dontrun{

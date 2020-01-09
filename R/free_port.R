@@ -1,4 +1,4 @@
-#' Retrieve a TCP port that is not currently in use
+#' Retrieve a Transmission Control Protocol (TCP) port that is not currently in use
 #'
 #' @name free_port
 #'
