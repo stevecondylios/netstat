@@ -4,7 +4,8 @@
 #'
 #' @usage netstat()
 #'
-#' @return A character vector comprising the output of the 'netstat' command line utility
+#' @return A character vector containing the lines of the output of the
+#'    'netstat' command line utility
 #'
 #' @export
 #'
@@ -24,14 +25,14 @@ netstat <- function() {
 
          Windows = {
            # print("retrieving windows")
-           system("netstat -n -a", intern = T)
+           system("netstat -n -a", intern = TRUE)
          },
 
          # Default behaviour (confirmed working for Darwin)
 
          {
            # print("retrieving darwin")
-           system("netstat -n -a", intern = T)
+           system("netstat -n -a", intern = TRUE)
          }
 
          )

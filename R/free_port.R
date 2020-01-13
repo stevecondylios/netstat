@@ -5,14 +5,14 @@
 #' @usage free_port(random)
 #' @param random Boolean value that defaults to FALSE
 #'
-#' @return A character vector of length one
+#' @return An integer vector of length one
 #'
 #' @export
 #'
 #' @examples
 #' \dontrun{
 #'   free_port()
-#'   free_port(random = T)
+#'   free_port(random = TRUE)
 #' }
 #'
 
@@ -20,16 +20,16 @@
 
 
 # Allocate a port
-free_port <- function(random = F) {
+free_port <- function(random = FALSE) {
 
   in_use <- sort(ports_in_use())
   unassigned <- sort(unassigned_ports())
 
-  if(random == F) {
+  if(random == FALSE) {
     port <- unassigned[!unassigned %in% in_use][1]
   }
 
-  if(random == T) {
+  if(random == TRUE) {
     port <- sample(unassigned[!unassigned %in% in_use][1],1)
   }
   port

@@ -10,7 +10,7 @@ free_port(random)
 \item{random}{Boolean value that defaults to FALSE}
 }
 \value{
-A character vector of length one
+An integer vector of length one
 }
 \description{
 Retrieve a Transmission Control Protocol (TCP) port that is not currently in use
@@ -18,7 +18,7 @@ Retrieve a Transmission Control Protocol (TCP) port that is not currently in use
 \examples{
 \dontrun{
   free_port()
-  free_port(random = T)
+  free_port(random = TRUE)
 }
 
 }

@@ -7,7 +7,8 @@
 netstat()
 }
 \value{
-A character vector comprising the output of the 'netstat' command line utility
+A character vector containing the lines of the output of the
+   'netstat' command line utility
 }
 \description{
 Retrieve the output of the 'netstat' command line utility

@@ -29,7 +29,9 @@ parse_netstat <- function(netstat_output) {
 
 
            temp <- paste0(gsub("\\s+", ",", ActiveConnections), collapse="\n")
-           read.table(text = temp, sep=",", stringsAsFactors = F, header=T, fill = T) # Note header T for windows
+
+           read.table(text = temp, sep=",", stringsAsFactors = FALSE,
+                      header=TRUE, fill = TRUE) # Note header TRUE for windows
          },
 
          # Default behaviour (confirmed working for Darwin)
@@ -40,7 +42,9 @@ parse_netstat <- function(netstat_output) {
 
 
            temp <- paste0(gsub("\\s+", ",", ActiveConnections), collapse="\n")
-           read.table(text = temp, sep=",", stringsAsFactors = F, header=F, fill = T)
+
+           read.table(text = temp, sep=",", stringsAsFactors = FALSE,
+                      header=FALSE, fill = TRUE)
 
          }
 
