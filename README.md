@@ -3,6 +3,8 @@ The Netstat Package
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/netstat)](https://cran.r-project.org/package=netstat)
 [![Travis build
 status](https://travis-ci.org/stevecondylios/netstat.svg?branch=master)](https://travis-ci.org/stevecondylios/netstat)
 <!-- badges: end -->
@@ -10,36 +12,27 @@ status](https://travis-ci.org/stevecondylios/netstat.svg?branch=master)](https:/
 `netstat` allows you to easily view which TCP ports are in use and which
 are free to use.
 
-Load library
-
 ``` r
-# library(devtools)
-# install_github("stevecondylios/netstat")
+# install.packages("netstat")
 library(netstat)
 ```
 
-### See which TCP ports are *in use*
+### See which TCP ports are currently in use with `ports_in_use()`
 
 ``` r
 ports_in_use()
 ```
 
-    ##   [1] "50741" "50740" "50739" "50738" "50737" "50736" "50735" "50734"
-    ##   [9] "50733" "50731" "50730" "50729" "50728" "50727" "50724" "50723"
-    ##  [17] "23619" "50720" "50694" "50684" "50671" "50670" "50668" "50667"
-    ##  [25] "50666" "50665" "50663" "50662" "50658" "50655" "50653" "50652"
-    ##  [33] "50651" "50650" "50649" "50637" "50635" "50633" "50632" "50631"
-    ##  [41] "50629" "50624" "50623" "50622" "50611" "50610" "50609" "50606"
-    ##  [49] "50605" "50604" "50601" "50599" "50598" "50551" "50597" "50596"
-    ##  [57] "50592" "50589" "50588" "50584" "50583" "50553" "25190" "38469"
-    ##  [65] "29239" "5432"  "47943" "1024"  "45112" "30666" "4381"  "49159"
-    ##  [73] "49156" "49157" "49155" "49154" "49153" "49152" "50717" "49886"
-    ##  [81] "61981" "50112" "59176" "52528" "55930" "52615" "51007" "54697"
-    ##  [89] "53793" "58381" "60892" "64712" "5353"  "52537" "3722"  "56142"
-    ##  [97] "49797" "55915" "57430" "*"     "58149" "58714" "63966" "138"  
-    ## [105] "137"
+    ##  [1] "23730" "55523" "45655" "12849" "55483" "55484" "55479" "55478"
+    ##  [9] "55473" "55471" "55459" "55445" "55443" "55439" "55430" "10467"
+    ## [17] "55149" "55036" "54938" "54913" "54902" "54898" "54845" "54844"
+    ## [25] "49155" "54828" "54827" "54826" "54824" "27971" "13580" "49738"
+    ## [33] "49383" "5432"  "1025"  "1024"  "45112" "30666" "49159" "49156"
+    ## [41] "49154" "49153" "55507" "51979" "62106" "60186" "63708" "59480"
+    ## [49] "5353"  "57549" "58386" "51128" "64194" "53821" "52458" "*"    
+    ## [57] "49212" "53007" "52377" "138"   "137"
 
-### Find a free TCP port using `free_port()`.
+### Find a free TCP port using `free_port()`
 
 ``` r
 free_port()
@@ -47,15 +40,10 @@ free_port()
 
     ## [1] 14415
 
-``` r
-free_port(random=T)
-```
+  - `free_port()` returns an available TCP port from Internet Assigned
+    Numbers Authority (IANA) listed unassigned ports.
 
-    ## [1] 9892
-
-  - `free_port()` returns a TCP port from Internet Assigned Numbers
-    Authority (IANA) listed unassigned ports.
-
-  - Any TCP port being used by the local machine will not be returned
-    (so `free_port()` can be used to allocate a free port
-    programmatically in applications without collisions)
+  - `free_port()` will not return any TCP port currently in use - so
+    `free_port()` can safely be used to allocate a ports
+    programmatically without collisions - great for automated testing or
+    browser automation in general
