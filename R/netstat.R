@@ -34,7 +34,9 @@ netstat <- function() {
          {
            # print("retrieving darwin")
            # https://unix.stackexchange.com/questions/564035/how-to-be-certain-of-running-linux-command-in-english?noredirect=1#comment1048762_564035
-           system("LANG=C LANGUAGE=C netstat -n -a", intern = TRUE)
+           # LANG=C LANGUAGE=C netstat -n -a
+           # Reverted after parsing in parse_netstat() altered
+           system("netstat -n -a", intern = TRUE)
          }
 
          )
