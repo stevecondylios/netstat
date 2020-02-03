@@ -56,7 +56,9 @@ ports_in_use <- function() {
 
          }
 
-         )
+         ) -> out
+
+  sort(as.integer(out[grepl("^[[:digit:]]+$", out)]))
 
 }
 
