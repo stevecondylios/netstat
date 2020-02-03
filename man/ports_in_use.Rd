@@ -7,7 +7,7 @@
 ports_in_use()
 }
 \value{
-A character vector of the TCP ports currently in use
+An integer vector of the TCP ports currently in use
 }
 \description{
 Obtain the TCP ports currently in use
