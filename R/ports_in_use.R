@@ -4,7 +4,7 @@
 #'
 #' @usage ports_in_use()
 #'
-#' @return A character vector of the TCP ports currently in use
+#' @return An integer vector of the TCP ports currently in use
 #'
 #' @export
 #'
@@ -24,7 +24,7 @@ ports_in_use <- function() {
 
   os <- Sys.info()['sysname']
 
-  switch(os,
+  out <- switch(os,
 
          Windows = {
            local <- active_connections_table$Local
@@ -56,7 +56,7 @@ ports_in_use <- function() {
 
          }
 
-         ) -> out
+         )
 
   sort(as.integer(out[grepl("^[[:digit:]]+$", out)]))
 
