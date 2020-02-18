@@ -27,7 +27,7 @@ ports_in_use <- function() {
   out <- switch(os,
 
          Windows = {
-           local <- active_connections_table$Local
+           local <- active_connections_table[,4] # Local / locale depending on language
 
            sapply(strsplit(local, ":"), function(x) { tail(x, 1) } )
 
@@ -52,13 +52,13 @@ ports_in_use <- function() {
              #trimws(last_component)
            }
 
-           unique(unname(sapply(local_address, after_last_dot))) # Note: may contain * (star character)
+           unname(sapply(local_address, after_last_dot)) # Note: may contain * (star character)
 
          }
 
          )
 
-  sort(as.integer(out[grepl("^[[:digit:]]+$", out)]))
+  sort(unique(as.integer(out[grepl("^[[:digit:]]+$", out)])))
 
 }
 
