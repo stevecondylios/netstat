@@ -5,25 +5,20 @@
 #' @usage netstat()
 #'
 #' @return A character vector containing the lines of the output of the
-#'    'netstat' command line utility
+#'     netstat' command line utility
 #'
 #' @export
 #'
-#' @keywords internal
 #' @examples
 #' \dontrun{
-#'   netstat()
+#'    netstat()
 #' }
-#'
-
-
-
 netstat <- function() {
   os <- Sys.info()['sysname']
 
   switch(os,
 
-         Windows = {
+         "Windows" = {
            # print("retrieving windows")
            # https://superuser.com/questions/1309399/change-display-language-in-windows-10-with-cmd-or-powershell-commands
            system("netstat -n -a", intern = TRUE)

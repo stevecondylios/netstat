@@ -5,9 +5,8 @@ Version: 0.1.2
 Authors@R: c(
     person("Steve", "Condylios", , "steve.condylios@gmail.com", c("aut", "cre"), 
     comment = c(ORCID = "0000-0003-0599-844X")),
-    person("Bob", "Rudis", email = "bob@rud.is",
-      role = c("ctb"), comment = c(ORCID =
-      "0000-0001-5670-2640"))
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("ctb"), 
+    comment = c(ORCID = "0000-0001-5670-2640"))
     )
 Maintainer: Steve Condylios <steve.condylios@gmail.com>
 BugReports: https://github.com/stevecondylios/netstat/issues
@@ -15,8 +14,7 @@ URL: https://github.com/stevecondylios/netstat
 Description: R interface for the 'netstat' command line utility used to retrieve and parse 
     commonly used network statistics, including available and in-use 
     transmission control protocol (TCP) ports. Primers offering technical background information 
-    on the 'netstat' 
-    command line utility are available in the "Linux System Administrator's Manual" 
+    on the 'netstat' command line utility are available in the "Linux System Administrator's Manual" 
     by Michael Kerrisk (2014) 
     <http://man7.org/linux/man-pages/man8/netstat.8.html>, and on the Microsoft website (2017) 
     <https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/netstat>.

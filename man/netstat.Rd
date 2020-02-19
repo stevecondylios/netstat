@@ -8,15 +8,13 @@ netstat()
 }
 \value{
 A character vector containing the lines of the output of the
-   'netstat' command line utility
+    netstat' command line utility
 }
 \description{
 Retrieve the output of the 'netstat' command line utility
 }
 \examples{
 \dontrun{
-  netstat()
+   netstat()
 }
-
 }
-\keyword{internal}
