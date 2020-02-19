@@ -49,7 +49,7 @@ ports_in_use <- function() {
              address_split <- strsplit(local_address, "\\.")
              address_components <- length(address_split[[1]])
              last_component <- address_split[[1]][address_components]
-             #trimws(last_component)
+             trimws(last_component)
            }
 
            unname(sapply(local_address, after_last_dot)) # Note: may contain * (star character)
