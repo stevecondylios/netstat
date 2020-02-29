@@ -1,11 +1,12 @@
 ---
-title: "The Netstat Package"
 output: github_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+# netstat <a href='https://github.com/stevecondylios/netstat'><img src='man/figures/netstat.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/netstat)](https://cran.r-project.org/package=netstat)
