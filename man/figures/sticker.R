@@ -23,7 +23,7 @@
 sticker(
 
   # image
-  "man/figures/zak.jpg",
+  "man/figures/zak.jpg", # https://unsplash.com/photos/7wBFsHWQDlk
   s_x=1, # slightly to right to appear centered
   s_y=1,
   s_width=1.5,
