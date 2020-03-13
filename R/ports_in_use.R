@@ -27,7 +27,7 @@ ports_in_use <- function() {
   out <- switch(os,
 
          "Windows" = {
-           local <- active_connections_table[,4] # Local / locale depending on language
+           local <- active_connections_table[ , 4] # Local / locale depending on language
 
            sapply(strsplit(local, ":"), function(x) { tail(x, 1) } )
 
