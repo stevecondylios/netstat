@@ -1,4 +1,4 @@
-#' Retrieve Network Statistics Including Available TCP Ports
+#' @description Retrieve Network Statistics Including Available TCP Ports
 #' @docType package
 #'
 #' @details It has the goal of providing a convenient way of retrieving and parsing commonly used
