@@ -5,9 +5,9 @@ Version: 0.1.2
 Authors@R: c(
     person("Steve", "Condylios", , "steve.condylios@gmail.com", c("aut", "cre"), 
     comment = c(ORCID = "0000-0003-0599-844X")),
-    person("Bob", "Rudis", email = "bob@rud.is", role = c("ctb"), 
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut"), 
     comment = c(ORCID = "0000-0001-5670-2640")),
-    person("Patrice", "Kiener", email="fattailsr@inmodelia.com", role=c("ctb"),
+    person("Patrice", "Kiener", email="fattailsr@inmodelia.com", role=c("aut"),
     comment = c(ORCID = "0000-0002-0505-9920"))
     )
 Maintainer: Steve Condylios <steve.condylios@gmail.com>
