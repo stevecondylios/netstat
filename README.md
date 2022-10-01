@@ -7,6 +7,7 @@
 status](https://www.r-pkg.org/badges/version/netstat)](https://cran.r-project.org/package=netstat)
 [![Travis build
 status](https://travis-ci.org/stevecondylios/netstat.svg?branch=master)](https://travis-ci.org/stevecondylios/netstat)
+![Downloads](https://cranlogs.r-pkg.org/badges/netstat)
 <!-- badges: end -->
 
 `netstat` allows you to easily view which TCP ports are in use and which
