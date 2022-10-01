@@ -41,10 +41,10 @@ free_port()
 
     ## [1] 14415
 
-  - `free_port()` returns an available TCP port from Internet Assigned
+-   `free_port()` returns an available TCP port from Internet Assigned
     Numbers Authority (IANA) listed unassigned ports.
 
-  - `free_port()` will not return any TCP port currently in use - so
+-   `free_port()` will not return any TCP port currently in use - so
     `free_port()` can safely be used to allocate a ports
     programmatically without collisions - great for automated testing or
     browser automation in general
