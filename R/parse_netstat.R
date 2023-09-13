@@ -27,6 +27,15 @@ parse_netstat <- function(netstat_output) {
            # print("retrieving windows")
            ActiveConnections <- netstat_output[-c(1:3)]
 
+           # set encoding for netstat_output
+           ## set it accordingly to system cmd chcp output
+           chcp <- system("chcp", intern = TRUE)
+           # set invalid encoding as latin1, to be able to use string base functions
+           Encoding(chcp[!validEnc(chcp)]) <- "latin1"
+           codepage <- substr(chcp, nchar(chcp)-2, nchar(chcp))
+           # convert ActiveConnections to utf8 from codepage
+           ActiveConnections <- iconv(ActiveConnections, from = codepage, to = "utf8")
+
            temp <- paste0(gsub("\\s+", ",", ActiveConnections), collapse="\n")
 
            read.table(text = temp, sep=",", stringsAsFactors = FALSE,
@@ -66,5 +75,3 @@ parse_netstat <- function(netstat_output) {
          )
 
 }
-
-
