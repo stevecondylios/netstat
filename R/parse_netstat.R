@@ -30,7 +30,7 @@ parse_netstat <- function(netstat_output) {
            # set encoding for netstat_output
            ## set it accordingly to system cmd chcp output
            chcp <- system("chcp", intern = TRUE)
-           # set invalind encoding as latin1, to be able to use string base functions
+           # set invalid encoding as latin1, to be able to use string base functions
            Encoding(chcp[!validEnc(chcp)]) <- "latin1"
            codepage <- substr(chcp, nchar(chcp)-2, nchar(chcp))
            # convert ActiveConnections to utf8 from codepage
